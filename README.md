@@ -10,8 +10,11 @@ unobtrusively integrated into any application or framework that supports
 [Connect](http://www.senchalabs.org/connect/)-style middleware, including
 [Express](http://expressjs.com/). It also supports [Loopback-Component-Passport](https://github.com/strongloop/loopback-component-passport).
 
+Wechat Official Accounts version, see [passport-wechat-public](https://github.com/wenwei1202/passport-wechat-public)
+
 Passport的微信企业号OAuth2.0用户验证模块， 支持Express，Strongloop|Loopback 以及loopback-component-passport。
 
+微信公众号，转至 [passport-wechat-public](https://github.com/wenwei1202/passport-wechat-public)
 
 ## Install
 
@@ -85,14 +88,13 @@ Please see Strongloop [official documents](https://docs.strongloop.com/pages/rel
 {
   "wechat": {
     "provider": "wechat",
-    "module": "passport-wechat-public",
+    "module": "passport-wechat-enterprise",
     "callbackURL": "/auth/wechat/callback",
     "successRedirect": "/auth/wechat/account",
     "failureRedirect": "/auth/wechat/failure",
-    "scope": ["snsapi_userinfo"],
-    "appId": "wxabe757c89bb6d74b",
-    "appSecret": "9a62bc24a31d5c7c2b1d053515d276f8",
-    "agent": "wechat",
+    "scope": "snsapi_base",
+    "corpId": "wxabe757c89bb6d74b",
+    "corpSecret": "9a62bc24a31d5c7c2b1d053515d276f8",
     "authScheme": "OAuth 2.0"/*required*/
   }
 }
