@@ -1,7 +1,7 @@
 {
   "name": "passport-wechat-enterprise",
-  "version": "0.1.1",
-  "description": "wechat enterprise oauth",
+  "version": "0.1.2",
+  "description": "Passport Strategy for Wechat Enterprise Account/微信企业号",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha --reporter spec test/*.test.j"
