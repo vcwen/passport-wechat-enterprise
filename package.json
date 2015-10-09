@@ -1,6 +1,6 @@
 {
   "name": "passport-wechat-enterprise",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "wechat enterprise oauth",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/wenwei1202/passport-wechat-enterprise"
   },
   "keywords": [
-    "passport"
+    "passport",
     "wechat",
     "enterprise"
   ],
