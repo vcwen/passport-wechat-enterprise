@@ -88,14 +88,13 @@ Please see Strongloop [official documents](https://docs.strongloop.com/pages/rel
 {
   "wechat": {
     "provider": "wechat",
-    "module": "passport-wechat-public",
+    "module": "passport-wechat-enterprise",
     "callbackURL": "/auth/wechat/callback",
     "successRedirect": "/auth/wechat/account",
     "failureRedirect": "/auth/wechat/failure",
-    "scope": ["snsapi_userinfo"],
-    "appId": "wxabe757c89bb6d74b",
-    "appSecret": "9a62bc24a31d5c7c2b1d053515d276f8",
-    "agent": "wechat",
+    "scope": "snsapi_base",
+    "corpId": "wxabe757c89bb6d74b",
+    "corpSecret": "9a62bc24a31d5c7c2b1d053515d276f8",
     "authScheme": "OAuth 2.0"/*required*/
   }
 }
