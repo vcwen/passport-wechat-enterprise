@@ -4,7 +4,7 @@
   "description": "Passport Strategy for Wechat Enterprise Account/微信企业号",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec test/*.test.j"
+    "test": "istanbul cover _mocha --report lcovonly  -- -R spec"
   },
   "repository": {
     "type": "git",
@@ -16,10 +16,9 @@
     "enterprise"
   ],
   "dependencies": {
-    "moment": "^2.10.3",
+    "async": "^1.5.2",
     "passport-strategy": "1.x.x",
-    "request": "^2.58.0",
-    "winston": "^1.0.2"
+    "request": "^2.58.0"
   },
   "author": "vincent.wen",
   "license": "MIT",
@@ -30,6 +29,8 @@
   "devDependencies": {
     "chai": "^3.3.0",
     "chai-passport-strategy": "^0.2.0",
-    "mocha": "^2.3.3"
+    "mocha": "^2.3.3",
+    "istanbul": "^0.4.3",
+    "proxyquire": "^1.7.7"
   }
 }
