@@ -117,7 +117,7 @@ describe('OAuth ', () => {
 
   describe('getAccessToken ', () => {
     const getAccessToken = function(cb) {
-      cb(null, new AccessToken('token', 7200))
+      cb(null, new AccessToken('token', 7200, Date.now()))
     }
     const oauth = OAuth('corpId', 'corpSecret', getAccessToken, () => {})
     oauth.getOAuthAccessToken = function(cb) {
@@ -147,7 +147,7 @@ describe('OAuth ', () => {
   describe('getUserInfo ', () => {
     const oauth = OAuth('corpId', 'corpSecret', () => {}, () => {})
     const code = 'code'
-    const accessToken = new AccessToken('token', 7200)
+    const accessToken = new AccessToken('token', 7200, Date.now())
     it('should the authorize url ', () => {
       oauth.getUserInfo(accessToken, code, (err, profile) => {
         expect(profile).to.deep.equal({

@@ -24,7 +24,7 @@ Wechat Official Accounts version, see [passport-wechat-public](https://github.co
 - The Wechat authentication strategy authenticates users using a Wechat
 account and OAuth 2.0 tokens.  The strategy requires a `verify` callback, which
 accepts these credentials and calls `done` providing a user, `options` specifying an corp ID, corp secret, callback URL, and optionally state, scope. The last two are getAccessToken and saveAccessToken functions for access token, and both required.
-  
+
   `getAccessToken` and `saveAccessToken` are two functions for access token, since wechat has limitation for retrieving access token.For every authentication, it will try to get the access token via `getAccessToken` function,if can't get one it will hit the wechat api `/gettoken` to get a new one then save it via `saveAccessToken` function.
 
 ```
@@ -114,7 +114,7 @@ followers:
    "UserId":"USERID",
    "DeviceId":"DEVICEID"
 }
-``` 
+```
 
 unfolloers:
 
