@@ -1,6 +1,6 @@
 {
   "name": "passport-wechat-enterprise",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Passport Strategy for Wechat Enterprise Account/微信企业号",
   "main": "index.js",
   "scripts": {
