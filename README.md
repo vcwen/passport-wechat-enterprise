@@ -41,8 +41,9 @@ passport.use("wechat",new WechatPublicStrategy({
   },
   function getAccessToken(cb) { ... },
   function saveAccessToken(accessToken,cb){ ... }
-));
+))
 ```
+
 
 #### Authenticate Requests
 
