@@ -190,7 +190,7 @@ describe('Strategy', function() {
     })
 
     it('should fetch info including openId if user has not subscribed', function(done) {
-      const strategy = new WechatStrategy(options, (profile, verified) => {
+      const strategy = new WechatStrategy(options, (profile) => {
         expect(profile.UserId).to.equal('OPENID')
         done()
       }, getAccessToken, () => {})
@@ -206,7 +206,7 @@ describe('Strategy', function() {
 
     it('should return error the code is invalid', function(done) {
       var err
-      const strategy = new WechatStrategy(options, (profile, verified) => {
+      const strategy = new WechatStrategy(options, (profile) => {
         expect(err.errcode).to.equal(40029)
         expect(err.errmsg).to.equal('invalid code')
         done()
@@ -226,7 +226,7 @@ describe('Strategy', function() {
     })
 
     it('should fail if UserId is null', function(done) {
-      const strategy = new WechatStrategy(options, (profile, verified) => {}, getAccessToken, () => {})
+      const strategy = new WechatStrategy(options, () => {}, getAccessToken, () => {})
       strategy._oauth.getUserInfo = getUserInfo
 
       chai.passport.use(strategy)
@@ -259,7 +259,7 @@ describe('Strategy', function() {
 
     it('should pass 3 arguments when passReqToCallback is true', (done) => {
       options.passReqToCallback = true
-      const strategy = new WechatStrategy(options, function(req, profile, verified) {
+      const strategy = new WechatStrategy(options, function() {
         expect(arguments.length).to.equal(3)
         done()
       }, getAccessToken, saveAccessToken)
@@ -274,7 +274,7 @@ describe('Strategy', function() {
 
     it('should pass 2 arguments when when passReqToCallback is false', (done) => {
       options.passReqToCallback = false
-      const strategy = new WechatStrategy(options, function(req, profile, verified) {
+      const strategy = new WechatStrategy(options, function(req, profile) {
         expect(arguments.length).to.equal(2)
         done()
       }, getAccessToken, saveAccessToken)
@@ -288,7 +288,7 @@ describe('Strategy', function() {
     })
     it('should get an error when verify function throw any error', (done) => {
       options.passReqToCallback = false
-      const strategy = new WechatStrategy(options, function(req, profile, verified) {
+      const strategy = new WechatStrategy(options, function(req, profile) {
         throw new Error('Verify Error')
       }, getAccessToken, saveAccessToken)
       strategy._oauth.getUserInfo = getUserInfo
@@ -365,7 +365,7 @@ describe('Strategy', function() {
           req.query.code = 'code'
         })
         .success((profile) => {
-          expect(profile).to.be.an('object');
+          expect(profile).to.be.an('object')
           done()
         })
         .authenticate()
@@ -392,7 +392,7 @@ describe('Strategy', function() {
     cb(null, token)
   }
 
-  function saveAccessToken(accessToken) {
+  function saveAccessToken() {
 
   }
 })
