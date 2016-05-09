@@ -41,4 +41,5 @@ ratings:
 
 exclude_paths:
 - node_modules/**/*
+- test/**/*
 #- vendor/**/*
