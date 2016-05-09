@@ -4,7 +4,8 @@
   "description": "Passport Strategy for Wechat Enterprise Account/微信企业号",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha --report lcovonly  -- -R spec"
+    "test": "istanbul cover _mocha --report lcovonly  -- -R spec",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,8 @@
     "chai-passport-strategy": "^0.2.0",
     "mocha": "^2.3.3",
     "istanbul": "^0.4.3",
-    "proxyquire": "^1.7.7"
+    "proxyquire": "^1.7.7",
+    "coveralls": "^2.11.9",
+    "mocha-lcov-reporter": "^1.2.0"
   }
 }

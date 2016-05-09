@@ -1,3 +1,8 @@
+[![npm version](https://badge.fury.io/js/passport-wechat-enterprise.svg)](https://badge.fury.io/js/passport-wechat-enterprise)
+[![Dependency Status](https://david-dm.org/wenwei1202/passport-wechat-enterprise.svg)](https://david-dm.org/wenwei1202/passport-wechat-enterprise)
+[![Build Status](https://travis-ci.org/wenwei1202/passport-wechat-enterprise.svg?branch=master)](https://travis-ci.org/wenwei1202/passport-wechat-enterprise)
+[![Coverage Status](https://coveralls.io/repos/github/wenwei1202/passport-wechat-enterprise/badge.svg?branch=master)](https://coveralls.io/github/wenwei1202/passport-wechat-enterprise?branch=master)
+[![Build Status](https://travis-ci.org/wenwei1202/passport-wechat-enterprise.svg?branch=master)](https://travis-ci.org/wenwei1202/passport-wechat-enterprise)
 # passport-wechat-enterprise
 [Passport](http://passportjs.org/) strategy for authenticating with [Wechat Enterprise Accounts](https://qy.weixin.qq.com/)
 using the OAuth 2.0 API.
@@ -106,7 +111,7 @@ for (var s in config) {
    "UserId":"USERID",
    "DeviceId":"DEVICEID"
 }
-``` 
+```
 
 未关注:
 
